@@ -12,23 +12,23 @@ public class CalcPi {
 
 
 			if (i%4 == 3){
-				double posNum = Math.ceil(i/4)*(i+4);
-				sumOfqPie += 1/(posNum);
+				double addToSum = (1/(Math.ceil((i/4))*(7)));
+				sumOfqPie -= (addToSum);
 
 			}
 			else if (i%4 == 1){
-				double negNum = Math.ceil(i/4)*(i+2);
-				sumOfqPie -= 1/(negNum);
+				double addToSum = (1/(Math.ceil((i/4))*(3)));
+				sumOfqPie -= (addToSum);
 
 			}
 			else if (i%4 == 2){
-				double posNum =  Math.ceil(i/4)*(i+3);
-				sumOfqPie += 1/(posNum);
+				double addToSum =  (1/(Math.ceil((i/4))*(5)));
+				sumOfqPie += (addToSum);
 
 			}
 			else if (i%4 == 0) {
-				double negNum =  Math.ceil(i/4)*(i+5);
-				sumOfqPie -= 1/(negNum);
+				double addToSum =  (1/(Math.ceil((i/4))*(9)));
+				sumOfqPie += (addToSum);
 			}
 
 			
