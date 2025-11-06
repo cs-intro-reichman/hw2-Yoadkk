@@ -5,33 +5,25 @@ public class CalcPi {
 		int n = (Integer.parseInt(args[0]));
 		double sumOfqPie = 1.0;
 
-	
 
 		for (double i = 1; i < n ; i++){
 			
-
-
-			if (i%4 == 3){
-				double addToSum = (1/(Math.ceil((i/4))*(7)));
-				sumOfqPie -= (addToSum);
-
+			if (i%4 == 0){
+				double addToSum = 1/(Math.floor((i/4))*8+1);
+				sumOfqPie += (addToSum);
 			}
 			else if (i%4 == 1){
-				double addToSum = (1/(Math.ceil((i/4))*(3)));
+				double addToSum = 1/(Math.floor((i/4))*8+3);
 				sumOfqPie -= (addToSum);
-
 			}
 			else if (i%4 == 2){
-				double addToSum =  (1/(Math.ceil((i/4))*(5)));
-				sumOfqPie += (addToSum);
-
-			}
-			else if (i%4 == 0) {
-				double addToSum =  (1/(Math.ceil((i/4))*(9)));
+				double addToSum = 1/(Math.floor((i/4))*8+5);
 				sumOfqPie += (addToSum);
 			}
-
-			
+			else if (i%4 == 3) {
+				double addToSum = 1/(Math.floor((i/4))*8+7);
+				sumOfqPie -= (addToSum);
+			}
 
 
 		}
